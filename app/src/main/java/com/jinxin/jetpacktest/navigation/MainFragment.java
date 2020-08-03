@@ -47,15 +47,20 @@ public class MainFragment extends Fragment {
 
         // 跳转界面的两种方式
         // 方法一
-//        root.findViewById(R.id.btn_to_second_fragment).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_sceondFragment);
-//            }
-//        });
+        root.findViewById(R.id.btn_to_second_fragment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Fragment常见的传递参数方式
+                Bundle bundle = new Bundle();
+                bundle.putString("user_name", "JinXin");
+                bundle.putInt("age", 24);
+
+                Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_sceondFragment, bundle);
+            }
+        });
 
         // 方法二
-        root.findViewById(R.id.btn_to_second_fragment)
-                .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_sceondFragment));
+//        root.findViewById(R.id.btn_to_second_fragment)
+//                .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_sceondFragment));
     }
 }

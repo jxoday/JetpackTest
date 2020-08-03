@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/sceondFragment"
-        android:name="com.jinxin.jetpacktest.navigation.SceondFragment"
+        android:name="com.jinxin.jetpacktest.navigation.SecondFragment"
         android:label="fragment_sceond"
         tools:layout="@layout/fragment_sceond" />
 </navigation>
