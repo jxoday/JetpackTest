@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jinxin.jetpacktest.navigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <!--添加页面跳转效果-->
+        <!-- app:popEnterAnim
+        是这个按下返回动作，目的地出栈时，action所在元素入场的动画，是Fragment1入场的动画 -->
+        <!-- app:popExitAnim
+        是这个按下返回动作，目的地出栈时离开的动画，是Fragment2离场的动画 -->
+        <!-- app:enterAnim
+         是这个action目的地进入的动画,是Fragment2入场的动画-->
+        <!-- app:exitAnim
+         是这个action所在元素离开的动画，是Fragment1离场的动画-->
+        <action
+            android:id="@+id/action_mainFragment_to_sceondFragment"
+            app:destination="@id/sceondFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sceondFragment"
+        android:name="com.jinxin.jetpacktest.navigation.SceondFragment"
+        android:label="fragment_sceond"
+        tools:layout="@layout/fragment_sceond" />
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JetpackTest</string>
+    <string name="btn_life_cycle">LifeCycle</string>
+    <string name="btn_navigation">Navigation</string>
+    <string name="fragment_main_tv_hint">hello main</string>
+    <string name="fragment_main_btn_to_second_fragment">ToSecond</string>
+    <string name="fragment_second_tv_hint">hello second</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
