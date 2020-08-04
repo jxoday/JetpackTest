@@ -45,12 +45,18 @@ public class SecondFragment extends Fragment {
 
     private void initView(View root) {
 
-        // Fragment常见的接受参数方式
         Bundle bundle = getArguments();
         if (bundle != null) {
 
-            String userName = bundle.getString("user_name");
-            int age = bundle.getInt("age");
+            // Fragment常见的接受参数方式
+//            String userName = bundle.getString("user_name");
+//            int age = bundle.getInt("age");
+
+            // 使用safe args插件接受参数
+            MainFragmentArgs mainFragmentArgs = MainFragmentArgs.fromBundle(bundle);
+            int age = mainFragmentArgs.getAge();
+            String userName = mainFragmentArgs.getUserName();
+
             TextView tvUserName = root.findViewById(R.id.tv_user_name);
             TextView tvAge = root.findViewById(R.id.tv_age);
 

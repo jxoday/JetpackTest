@@ -51,9 +51,15 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Fragment常见的传递参数方式
-                Bundle bundle = new Bundle();
-                bundle.putString("user_name", "JinXin");
-                bundle.putInt("age", 24);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("user_name", "JinXin");
+//                bundle.putInt("age", 24);
+
+                // 使用safe args传递参数
+                Bundle bundle = new MainFragmentArgs.Builder()
+                        .setAge(10)
+                        .setUserName("jinxin")
+                        .build().toBundle();
 
                 Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_sceondFragment, bundle);
             }
