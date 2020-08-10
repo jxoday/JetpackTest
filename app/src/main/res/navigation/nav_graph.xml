@@ -45,4 +45,10 @@
         android:name="com.jinxin.jetpacktest.navigation.SecondFragment"
         android:label="fragment_sceond"
         tools:layout="@layout/fragment_sceond" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.jinxin.jetpacktest.navigation.SettingFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_setting" />
 </navigation>
