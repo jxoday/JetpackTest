@@ -13,6 +13,8 @@
 
         <service android:name=".lifecycle.service.MyService" />
 
+
+        <activity android:name=".viewmodel.ViewModelTestActivity" />
         <activity android:name=".navigation.NavigationActivity" >
 
             <intent-filter>
