@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.jinxin.jetpacktest.lifecycle.LifecycleMainActivity;
 import com.jinxin.jetpacktest.lifecycle.activity.LifeCycleActivity;
+import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
 import com.jinxin.jetpacktest.navigation.NavigationActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 
@@ -43,5 +44,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btn_live_data).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LiveDataTestActivity.class));
+            }
+        });
     }
 }

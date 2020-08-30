@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">JetpackTest</string>
+
     <string name="btn_life_cycle">LifeCycle</string>
     <string name="btn_navigation">Navigation</string>
     <string name="btn_view_model">ViewModel</string>
+    <string name="btn_live_data">LiveData</string>
+
     <string name="fragment_main_tv_hint">hello main</string>
     <string name="fragment_main_btn_to_second_fragment">ToSecond</string>
     <string name="fragment_second_tv_hint">hello second</string>
