@@ -5,6 +5,7 @@
     <string name="btn_navigation">Navigation</string>
     <string name="btn_view_model">ViewModel</string>
     <string name="btn_live_data">LiveData</string>
+    <string name="btn_live_data_fragment">LiveDataFragment</string>
 
     <string name="fragment_main_tv_hint">hello main</string>
     <string name="fragment_main_btn_to_second_fragment">ToSecond</string>
