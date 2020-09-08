@@ -13,6 +13,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //javaComplieOptions SECTION
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":"$projectDir/schemas".toString()]
+            }
+        }
     }
 
     buildTypes {
@@ -42,5 +49,9 @@ dependencies {
 
     // 添加ViewModel依赖
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+
+    // 添加Room相关依赖，进行数据库相关操作
+    implementation "androidx.room:room-runtime:2.2.5"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
 
 }

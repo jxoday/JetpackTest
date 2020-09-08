@@ -41,4 +41,11 @@
         android:text="@string/btn_live_data_fragment"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/btn_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_room"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

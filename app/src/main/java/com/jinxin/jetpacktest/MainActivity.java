@@ -11,6 +11,7 @@ import com.jinxin.jetpacktest.lifecycle.activity.LifeCycleActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataFragmentActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
 import com.jinxin.jetpacktest.navigation.NavigationActivity;
+import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 
 /**
@@ -58,5 +59,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, LiveDataFragmentActivity.class));
             }
         });
+
+        findViewById(R.id.btn_room).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RoomTestActivity.class));
+            }
+        });
+
     }
 }
