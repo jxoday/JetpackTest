@@ -1,5 +1,6 @@
 package com.jinxin.jetpacktest.room.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -43,6 +44,14 @@ public interface StudentDao {
      */
     @Query("select * from student")
     List<Student> getStudentList();
+
+    /**
+     * 使用LiveData将List<Student>包装起来
+     * 获取获取学生数据
+     * @return
+     */
+    @Query("select * from student")
+    LiveData<List<Student>> getLiveStudentList();
 
     /**
      * 根据id获取学生数据

@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jinxin.jetpacktest.lifecycle.LifecycleMainActivity;
-import com.jinxin.jetpacktest.lifecycle.activity.LifeCycleActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataFragmentActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
 import com.jinxin.jetpacktest.navigation.NavigationActivity;
 import com.jinxin.jetpacktest.room.RoomTestActivity;
+import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 
 /**
@@ -64,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RoomTestActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_live_data_view_model_room).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LiveDataRoomTestActivity.class));
             }
         });
 
