@@ -2,9 +2,12 @@ package com.jinxin.jetpacktest.room;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.migration.Migration;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.jinxin.jetpacktest.room.dao.StudentDao;
 import com.jinxin.jetpacktest.room.entity.Student;
@@ -18,7 +21,7 @@ import com.jinxin.jetpacktest.room.entity.Student;
  */
 @Database(entities = {
         Student.class
-}, version = 1)
+}, version = 3)
 public abstract class MyDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "my_db";
@@ -31,10 +34,46 @@ public abstract class MyDatabase extends RoomDatabase {
                     context.getApplicationContext(),
                     MyDatabase.class,
                     DATABASE_NAME)
+                    .fallbackToDestructiveMigration() // 在出现升级异常时，重新创建数据表
+                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
                     .build();
         }
         return database;
     }
+
+    /**
+     * Room升级
+     */
+    private static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+            // 执行与升级相关的操作
+
+        }
+    };
+
+    /**
+     * 销毁与重建策略
+     */
+    private static final Migration MIGRATION_2_3 = new Migration(2, 3) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+
+            // 1.创建一个符合表结果要求的临时表temp_student
+            database.execSQL("create table temp_student (" +
+                    "id INTEGER PRIMARY KEY NOT NULL," +
+                    "name TEXT," +
+                    "age INTEGER NOT NULL)");
+            // 2.将数据从旧表student复制至临时表temp_student
+            database.execSQL("insert into temp_student (id, name, age) " +
+                    "select id, name, age from student");
+            // 3.删除旧表student
+            database.execSQL("drop table student");
+            // 4.将临时表temp_student 重命名为 student
+            database.execSQL("alter table temp_student rename to student");
+        }
+    };
+
 
     /**
      * Student数据操作

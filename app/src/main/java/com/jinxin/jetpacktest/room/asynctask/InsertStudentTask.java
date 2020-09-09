@@ -30,7 +30,7 @@ public class InsertStudentTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... arg0) {
-        myDatabase.studentDao().insertStudent(new Student(name, age));
+        myDatabase.studentDao().insertStudent(new Student(name, Integer.parseInt(age)));
         studentList.clear();
         studentList.addAll(myDatabase.studentDao().getStudentList());
         return null;

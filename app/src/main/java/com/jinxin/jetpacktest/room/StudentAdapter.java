@@ -46,7 +46,7 @@ public class StudentAdapter extends BaseAdapter {
         }
         viewHolder.tvId.setText(String.valueOf(data.get(position).id));
         viewHolder.tvName.setText(data.get(position).name);
-        viewHolder.tvAge.setText(data.get(position).age);
+        viewHolder.tvAge.setText(String.valueOf(data.get(position).age));
         return convertView;
     }
 
