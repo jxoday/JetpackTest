@@ -34,6 +34,8 @@ public abstract class MyDatabase extends RoomDatabase {
                     context.getApplicationContext(),
                     MyDatabase.class,
                     DATABASE_NAME)
+                    // 从assets/database/students目录下读取students.db
+                    .createFromAsset("database/students.db")
                     .fallbackToDestructiveMigration() // 在出现升级异常时，重新创建数据表
                     .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
                     .build();
