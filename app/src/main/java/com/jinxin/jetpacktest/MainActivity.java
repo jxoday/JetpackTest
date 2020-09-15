@@ -13,6 +13,7 @@ import com.jinxin.jetpacktest.navigation.NavigationActivity;
 import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
+import com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity;
 
 /**
  * @author JinXin
@@ -71,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LiveDataRoomTestActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_work_manager).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, WorkManagerTestActivity.class));
             }
         });
 
