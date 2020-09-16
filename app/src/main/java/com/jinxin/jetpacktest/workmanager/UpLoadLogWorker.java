@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
@@ -27,11 +28,18 @@ public class UpLoadLogWorker extends Worker {
     @Override
     public Result doWork() {
         Log.d(TAG, "doWork: ");
+        // 接受外面传递进来的数据
+        String inputData = getInputData().getString("inputData");
+
+        // 任务执行完成后返回数据
+        Data outPutData = new Data.Builder()
+                .putString("outputData", "任务执行成功")
+                .build();
 
         // doWork()有三种类型的返回值
         // 执行成功 返回Result.success()
         // 执行失败 返回Result.failure()
         // 需要重新执行 返回Result.retry()
-        return Result.success();
+        return Result.success(outPutData);
     }
 }
