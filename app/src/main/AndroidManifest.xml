@@ -13,6 +13,7 @@
 
         <service android:name=".lifecycle.service.MyService" />
 
+        <activity android:name="com.jinxin.jetpacktest.databinding.DataBindingTestActivity"/>
         <activity android:name="com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity" />
         <activity android:name="com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity" />
         <activity android:name="com.jinxin.jetpacktest.room.RoomTestActivity" />

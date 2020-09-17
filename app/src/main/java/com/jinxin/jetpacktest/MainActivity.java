@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jinxin.jetpacktest.databinding.DataBindingTestActivity;
 import com.jinxin.jetpacktest.lifecycle.LifecycleMainActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataFragmentActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
@@ -79,6 +80,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, WorkManagerTestActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_data_binding).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DataBindingTestActivity.class));
             }
         });
 

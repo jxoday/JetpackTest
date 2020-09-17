@@ -9,6 +9,7 @@
     <string name="btn_room">Room</string>
     <string name="btn_live_data_view_model_room">LiveData+ViewModel+Room</string>
     <string name="btn_work_manager">WorkManager</string>
+    <string name="btn_data_binding">DataBinding</string>
 
     <string name="fragment_main_tv_hint">hello main</string>
     <string name="fragment_main_btn_to_second_fragment">ToSecond</string>
