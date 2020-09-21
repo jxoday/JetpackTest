@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jinxin.jetpacktest">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".lifecycle.application.MyApplication"
         android:allowBackup="true"

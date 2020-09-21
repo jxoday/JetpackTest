@@ -13,42 +13,88 @@
             name="EventHandler"
             type="com.jinxin.jetpacktest.databinding.EventHandleListener" />
 
+        <variable
+            name="networkImage"
+            type="String" />
+
+        <variable
+            name="localImage"
+            type="int" />
+
+        <variable
+            name="imagePadding"
+            type="int" />
+        
+        <variable
+            name="ClickHandler"
+            type="com.jinxin.jetpacktest.databinding.DataBindingTestActivity.ClickHandle" />
         <import type="com.jinxin.jetpacktest.databinding.BookRatingUtil" />
     </data>
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         tools:context=".databinding.DataBindingTestActivity">
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{book.title}" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{book.author}" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{book.title}" />
 
-        <TextView
-            android:id="@+id/tv_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{BookRatingUtil.getRatingString(book.rating)}" />
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{book.author}" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{EventHandler.onButtonClicked}"
-            android:text="Click me" />
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{BookRatingUtil.getRatingString(book.rating)}" />
 
-        <!-- 二级页面接收数据 -->
-        <include
-            layout="@layout/layout_content"
-            app:book="@{book}" />
-    </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{EventHandler.onButtonClicked}"
+                android:text="Click me" />
+
+            <!-- 二级页面接收数据 -->
+            <include
+                layout="@layout/layout_content"
+                app:book="@{book}" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                app:image="@{networkImage}"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                app:image="@{localImage}"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                app:image="@{networkImage}"
+                app:defaultImageResource="@{localImage}"
+                app:padding="@{imagePadding}"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change padding"
+                android:onClick="@{ClickHandler.onClick}"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>
