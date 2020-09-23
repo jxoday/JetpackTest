@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jinxin.jetpacktest.databinding.DataBindingTestActivity;
+import com.jinxin.jetpacktest.databinding.RecyclerViewBindingActivity;
+import com.jinxin.jetpacktest.databinding.TowWayBindingActivity;
 import com.jinxin.jetpacktest.lifecycle.LifecycleMainActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataFragmentActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
@@ -87,6 +89,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, DataBindingTestActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_two_way_binding).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TowWayBindingActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_recycle_view_binding).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerViewBindingActivity.class));
             }
         });
 

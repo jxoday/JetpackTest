@@ -8,12 +8,19 @@ public class Book {
     private String title;
 
     private String author;
+    private String image;
 
     private int rating;
 
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
+    }
+
+    public Book(String title, String author, String image) {
+        this.title = title;
+        this.author = author;
+        this.image = image;
     }
 
     public Book(String title, String author, int rating) {
@@ -24,6 +31,10 @@ public class Book {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public String getAuthor() {

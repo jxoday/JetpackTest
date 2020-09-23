@@ -69,4 +69,18 @@
         android:text="@string/btn_data_binding"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/btn_two_way_binding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_two_way_binding"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_recycle_view_binding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_recycle_view_binding"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

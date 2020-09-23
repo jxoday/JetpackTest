@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.jinxin.jetpacktest.databinding.TowWayBindingViewModel" />
+
+        <variable
+            name="simpleViewModel"
+            type="com.jinxin.jetpacktest.databinding.TowWaySimpleBindingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".databinding.DataBindingTestActivity">
+
+        <!-- 完成双向绑定布局表达式由单向绑定的@{}变为@={}即可 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={simpleViewModel.userName}"/>
+    </LinearLayout>
+</layout>
