@@ -17,6 +17,7 @@ import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 import com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity;
+import com.jinxin.paging.itemkeyeddatasrource.ItemKeyedMainActivity;
 import com.jinxin.paging.pagekeyeddatasource.PageKeyedActivity;
 import com.jinxin.paging.positionaldatasource.PagingMainActivity;
 
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_paging_positional).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, PagingMainActivity.class)));
 
         findViewById(R.id.btn_paging_page_keyed).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, PageKeyedActivity.class)));
+
+        findViewById(R.id.btn_paging_item_keyed).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ItemKeyedMainActivity.class)));
 
     }
 }

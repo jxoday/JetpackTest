@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application android:usesCleartextTraffic="true">
-        <activity android:name=".pagekeyeddatasource.PageKeyedActivity"></activity>
+        <activity android:name=".itemkeyeddatasrource.ItemKeyedMainActivity"></activity>
+        <activity android:name=".pagekeyeddatasource.PageKeyedActivity" />
         <activity android:name=".positionaldatasource.PagingMainActivity" />
     </application>
 
