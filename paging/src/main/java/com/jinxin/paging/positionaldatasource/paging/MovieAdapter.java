@@ -81,5 +81,4 @@ public class MovieAdapter extends PagedListAdapter<Movie, MovieAdapter.MovieView
             tvYear = itemView.findViewById(R.id.tv_year);
         }
     }
-
 }

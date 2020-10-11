@@ -12,7 +12,8 @@
     <string name="btn_data_binding">DataBinding</string>
     <string name="btn_two_way_binding">DataBinding双向绑定</string>
     <string name="btn_recycle_view_binding">DataBinding-Recycler绑定</string>
-    <string name="btn_paging">Paging</string>
+    <string name="btn_paging_positional">Paging - Positional</string>
+    <string name="btn_paging_page_keyed">Paging - PageKeyed</string>
 
     <string name="fragment_main_tv_hint">hello main</string>
     <string name="fragment_main_btn_to_second_fragment">ToSecond</string>

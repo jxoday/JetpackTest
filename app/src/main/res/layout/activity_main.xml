@@ -1,93 +1,105 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_life_cycle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_life_cycle"
-        android:textAllCaps="false"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_navigation"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_life_cycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_life_cycle"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_view_model"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_view_model"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_navigation"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_live_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_live_data"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_view_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_view_model"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_live_data_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_live_data_fragment"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_live_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_live_data"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_room"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_room"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_live_data_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_live_data_fragment"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_live_data_view_model_room"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_live_data_view_model_room"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_room"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_work_manager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_work_manager"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_live_data_view_model_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_live_data_view_model_room"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_data_binding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_data_binding"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_work_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_work_manager"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_two_way_binding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_two_way_binding"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_data_binding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_data_binding"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_recycle_view_binding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_recycle_view_binding"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_two_way_binding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_two_way_binding"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_paging"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_paging"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_recycle_view_binding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_recycle_view_binding"
+            android:textAllCaps="false"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_paging_positional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_paging_positional"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_paging_page_keyed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_paging_page_keyed"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
