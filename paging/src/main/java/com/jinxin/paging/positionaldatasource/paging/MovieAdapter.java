@@ -1,6 +1,5 @@
-package com.jinxin.paging.paging;
+package com.jinxin.paging.positionaldatasource.paging;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jinxin.paging.R;
-import com.jinxin.paging.model.Movie;
+import com.jinxin.paging.positionaldatasource.model.Movie;
 import com.squareup.picasso.Picasso;
 
 /**

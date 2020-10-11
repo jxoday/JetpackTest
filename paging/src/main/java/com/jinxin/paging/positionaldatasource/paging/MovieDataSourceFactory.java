@@ -1,10 +1,9 @@
-package com.jinxin.paging.paging;
+package com.jinxin.paging.positionaldatasource.paging;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.MutableLiveData;
 import androidx.paging.DataSource;
 
-import com.jinxin.paging.model.Movie;
+import com.jinxin.paging.positionaldatasource.model.Movie;
 
 /**
  * MovieDataSourceFactory 负责创建 MovieDataSource，并使用 LiveData 包装 MovieDataSource，将其暴露 MovieViewModel

@@ -1,4 +1,4 @@
-package com.jinxin.paging.model;
+package com.jinxin.paging.positionaldatasource.model;
 
 import lombok.Data;
 

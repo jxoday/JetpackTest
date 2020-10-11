@@ -1,6 +1,6 @@
-package com.jinxin.paging.api;
+package com.jinxin.paging.positionaldatasource.api;
 
-import com.jinxin.paging.model.Movies;
+import com.jinxin.paging.positionaldatasource.model.Movies;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

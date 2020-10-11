@@ -17,7 +17,7 @@ import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 import com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity;
-import com.jinxin.paging.PagingMainActivity;
+import com.jinxin.paging.positionaldatasource.PagingMainActivity;
 
 /**
  * @author JinXin

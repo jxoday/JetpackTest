@@ -1,4 +1,4 @@
-package com.jinxin.paging;
+package com.jinxin.paging.positionaldatasource;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -9,9 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.jinxin.paging.model.Movie;
-import com.jinxin.paging.paging.MovieAdapter;
-import com.jinxin.paging.paging.MovieViewModel;
+import com.jinxin.paging.R;
+import com.jinxin.paging.positionaldatasource.model.Movie;
+import com.jinxin.paging.positionaldatasource.paging.MovieAdapter;
+import com.jinxin.paging.positionaldatasource.paging.MovieViewModel;
 
 /**
  * @author JinXin

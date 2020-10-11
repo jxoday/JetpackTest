@@ -1,4 +1,4 @@
-package com.jinxin.paging.paging;
+package com.jinxin.paging.positionaldatasource.paging;
 
 import android.util.Log;
 
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
 
-import com.jinxin.paging.model.Movie;
+import com.jinxin.paging.positionaldatasource.model.Movie;
 
 /**
  * 在 MovieViewModel 中通过 LivePagedListBuilder创建和配置 PagedList，

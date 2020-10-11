@@ -6,7 +6,7 @@
 
     <application
         android:usesCleartextTraffic="true">
-        <activity android:name=".PagingMainActivity" />
+        <activity android:name=".positionaldatasource.PagingMainActivity" />
     </application>
 
 </manifest>

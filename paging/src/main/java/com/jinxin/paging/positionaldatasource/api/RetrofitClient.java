@@ -1,4 +1,4 @@
-package com.jinxin.paging.api;
+package com.jinxin.paging.positionaldatasource.api;
 
 import com.jinxin.paging.BuildConfig;
 

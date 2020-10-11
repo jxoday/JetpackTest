@@ -1,14 +1,14 @@
-package com.jinxin.paging.paging;
+package com.jinxin.paging.positionaldatasource.paging;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.paging.PositionalDataSource;
 
-import com.jinxin.paging.api.DouBanApi;
-import com.jinxin.paging.api.RetrofitClient;
-import com.jinxin.paging.model.Movie;
-import com.jinxin.paging.model.Movies;
+import com.jinxin.paging.positionaldatasource.api.DouBanApi;
+import com.jinxin.paging.positionaldatasource.api.RetrofitClient;
+import com.jinxin.paging.positionaldatasource.model.Movie;
+import com.jinxin.paging.positionaldatasource.model.Movies;
 
 import retrofit2.Call;
 import retrofit2.Callback;
