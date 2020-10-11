@@ -22,6 +22,11 @@ android {
         }
     }
 
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     // 启用数据绑定
     dataBinding {
         enabled = true
@@ -38,6 +43,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    implementation project(':paging')
+
     // 基础组件依赖
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
@@ -51,17 +58,17 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // 添加lifecycle相关依赖
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     // 添加ViewModel依赖
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
 
     // 添加Room相关依赖，进行数据库相关操作
-    implementation "androidx.room:room-runtime:2.2.5"
-    annotationProcessor "androidx.room:room-compiler:2.2.5"
+    implementation 'androidx.room:room-runtime:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
 
     // 添加WorkManager相关依赖
-    implementation "androidx.work:work-runtime:2.4.0"
+    implementation 'androidx.work:work-runtime:2.4.0'
     // 图片加载框架
     implementation 'com.squareup.picasso:picasso:2.71828'
 

@@ -17,6 +17,7 @@ import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
 import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 import com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity;
+import com.jinxin.paging.PagingMainActivity;
 
 /**
  * @author JinXin
@@ -103,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RecyclerViewBindingActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_paging).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PagingMainActivity.class));
             }
         });
 
