@@ -114,6 +114,13 @@
             android:layout_height="wrap_content"
             android:text="@string/btn_paging_boundary_callback"
             android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_mvvm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mvvm"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

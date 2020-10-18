@@ -1,13 +1,13 @@
 package com.jinxin.jetpacktest.lifecycle.application;
 
-import android.app.Application;
-
 import androidx.lifecycle.ProcessLifecycleOwner;
+
+import com.jinxin.mvvm.MvvmApplication;
 
 /**
  * @author JinXin 2020/7/27
  */
-public class MyApplication extends Application {
+public class MyApplication extends MvvmApplication {
 
     @Override
     public void onCreate() {

@@ -16,6 +16,7 @@
     <string name="btn_paging_page_keyed">Paging - PageKeyed</string>
     <string name="btn_paging_item_keyed">Paging - ItemKeyed</string>
     <string name="btn_paging_boundary_callback">Paging - BoundaryCallback</string>
+    <string name="btn_mvvm">MVVM架构</string>
 
     <string name="fragment_main_tv_hint">hello main</string>
     <string name="fragment_main_btn_to_second_fragment">ToSecond</string>

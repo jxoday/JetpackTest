@@ -1,2 +1,3 @@
+include ':mvvm'
 include ':app', ':paging'
 rootProject.name = "JetpackTest"

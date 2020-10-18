@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.jinxin.jetpacktest.databinding.DataBindingTestActivity;
 import com.jinxin.jetpacktest.databinding.RecyclerViewBindingActivity;
@@ -62,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_paging_item_keyed).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ItemKeyedMainActivity.class)));
 
         findViewById(R.id.btn_paging_boundary_callback).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, BoundaryActivity.class)));
+
+        findViewById(R.id.btn_mvvm).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, com.jinxin.mvvm.MainActivity.class)));
 
     }
 }
