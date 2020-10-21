@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jinxin.lifecycle">
+
+    <application
+        android:name=".application.MyApplication"
+        tools:ignore="Instantiatable">
+
+        <service android:name=".service.MyService" />
+
+        <activity android:name=".activity.LifeCycleActivity" />
+        <activity android:name=".LifecycleMainActivity" />
+        <activity android:name=".service.LifecycleServiceActivity" />
+    </application>
+</manifest>

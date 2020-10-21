@@ -1,0 +1,5 @@
+<resources>
+    <string name="location">位置 %s</string>
+    <string name="followers">关注 %s</string>
+    <string name="following">粉丝 %s</string>
+</resources>
