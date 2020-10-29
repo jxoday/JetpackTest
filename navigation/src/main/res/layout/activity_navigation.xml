@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.NavigationActivity">
+    tools:context=".NavigationActivity">
 
-    <!-- app:defaultNavHost="true"：表示该Fragment会自动处理系统返回键，
-     即当用户按下手机的返回按钮时，系统能自动将当前所展示的Fragment退出-->
-    <!-- app:navGraph：用于设置该Fragment对应的导航图 -->
     <fragment
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"

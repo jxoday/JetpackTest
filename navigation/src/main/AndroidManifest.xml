@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jinxin.navigation">
+
+    <application>
+        <activity android:name=".test.TestActivity" />
+        <activity android:name=".NavigationActivity" >
+
+            <!-- 为Activity 设置<nav-graph/>标签-->
+            <nav-graph android:value="@navigation/nav_graph"/>
+        </activity>
+    </application>
+
+</manifest>

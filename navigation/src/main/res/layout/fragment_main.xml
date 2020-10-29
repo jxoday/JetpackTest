@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MainFragment"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btn_to_second_fragment_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to SecondFragment"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_to_second_fragment_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to SecondFragment"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_send_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sendNotification"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

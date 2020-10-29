@@ -3,20 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.SecondFragment">
+    tools:context=".test.OneTestFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/tv_user_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/fragment_second_tv_hint" />
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:text="@string/fragment_second_tv_hint" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

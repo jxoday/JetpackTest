@@ -1,4 +1,4 @@
-package com.jinxin.jetpacktest.navigation;
+package com.jinxin.navigation;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -15,8 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jinxin.jetpacktest.R;
-
 /**
  * @author JinXin
  */
@@ -29,13 +27,6 @@ public class MainFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static MainFragment newInstance(String param1, String param2) {
-        MainFragment fragment = new MainFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,53 +37,38 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        initView(root);
-        return root;
-    }
-
-    private void initView(View root) {
-
-        // 跳转界面的两种方式
-        // 方法一
-        root.findViewById(R.id.btn_to_second_fragment).setOnClickListener(new View.OnClickListener() {
+        // 跳转页面方法1
+        view.findViewById(R.id.btn_to_second_fragment_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Fragment常见的传递参数方式
+                // 常见的传递参数方式
 //                Bundle bundle = new Bundle();
-//                bundle.putString("user_name", "JinXin");
-//                bundle.putInt("age", 24);
+//                bundle.putString("user_name", "Michael");
+//                bundle.putInt("age", 30);
+//                Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_secondFragment, bundle);
 
-                // 使用safe args传递参数
-                Bundle bundle = new MainFragmentArgs.Builder()
-                        .setAge(10)
-                        .setUserName("jinxin")
+                // 使用 safe args 传递参数 写法一
+                Bundle bundle = new SecondFragmentArgs.Builder()
+                        .setUserName("Michael")
+                        .setAge(30)
                         .build().toBundle();
-
-                Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_sceondFragment, bundle);
+                Navigation.findNavController(v).navigate(R.id.action_mainFragment_to_secondFragment, bundle);
             }
         });
 
-        // 方法二
-//        root.findViewById(R.id.btn_to_second_fragment)
-//                .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_sceondFragment));
+        // 跳转页面方法二
+        view.findViewById(R.id.btn_to_second_fragment_2)
+                .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_secondFragment));
 
-
-
-        /* **************************************************************************************/
-
-        // DeepLink，即深层链接
-        // 通过DeepLink，可以利用PendingIntent或一个真实的URL链接，直接跳转应用程序中的某个页面（Activity/Fragment）
-
-        // PendingIntent方式。
-        // 当应用程序接受到某个通知推送，用户点击该通知时，能够直接跳转到展示该通知内容的页面
-        root.findViewById(R.id.btn_pending_intent).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.btn_send_notification).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendNotification();
             }
         });
+        return view;
     }
 
     /**
@@ -109,10 +85,11 @@ public class MainFragment extends Fragment {
         }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setSmallIcon(R.drawable.ic_launcher_background)
                 .setContentTitle("DeepLinkDemo")
                 .setContentText("Test")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                // 设置 PendingIntent
                 .setContentIntent(getPendingIntent())
                 .setAutoCancel(true);
 
@@ -127,12 +104,13 @@ public class MainFragment extends Fragment {
      */
     private PendingIntent getPendingIntent() {
         Bundle bundle = new Bundle();
-        bundle.putString("params", "pendingIntent");
+        bundle.putString("userName", "Michael");
+        bundle.putInt("age", 30);
         return Navigation
-                .findNavController(getActivity(), R.id.btn_pending_intent)
+                .findNavController(requireActivity(), R.id.btn_send_notification)
                 .createDeepLink()
                 .setGraph(R.navigation.nav_graph)
-                .setDestination(R.id.deepLinkFragment)
+                .setDestination(R.id.secondFragment)
                 .setArguments(bundle)
                 .createPendingIntent();
     }

@@ -3,6 +3,7 @@
 
     <string name="btn_life_cycle">LifeCycle</string>
     <string name="btn_navigation">Navigation</string>
+    <string name="btn_navigation_ui">NavigationUI</string>
     <string name="btn_view_model">ViewModel</string>
     <string name="btn_live_data">LiveData</string>
     <string name="btn_live_data_fragment">LiveDataFragment</string>

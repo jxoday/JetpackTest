@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_test"
+    app:startDestination="@id/oneTestFragment">
+
+    <fragment
+        android:id="@+id/oneTestFragment"
+        android:name="com.jinxin.navigation.test.OneTestFragment"
+        android:label="fragment_one_test"
+        tools:layout="@layout/fragment_one_test" />
+
+    <fragment
+        android:id="@+id/twoTestFragment"
+        android:name="com.jinxin.navigation.test.TwoTestFragment"
+        android:label="fragment_two_test"
+        tools:layout="@layout/fragment_two_test" />
+
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jinxin.navigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.jinxin.navigation.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+
+        <!-- 添加参数 -->
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue='"unknown'/>
+
+        <!-- 添加参数 -->
+        <argument
+            android:name="age"
+            app:argType="integer"
+            android:defaultValue="0"/>
+
+        <!-- 为destination 添加<deepLink/>标签 -->
+        <deepLink app:uri="test.deeplink.com/{userName}/{age}" />
+
+    </fragment>
+
+</navigation>
