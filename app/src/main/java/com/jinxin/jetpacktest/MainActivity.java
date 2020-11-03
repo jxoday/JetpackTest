@@ -12,7 +12,6 @@ import com.jinxin.jetpacktest.livedata.LiveDataFragmentActivity;
 import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
 import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
-import com.jinxin.jetpacktest.viewmodel.ViewModelTestActivity;
 import com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity;
 import com.jinxin.lifecycle.LifecycleMainActivity;
 import com.jinxin.navigation.NavigationActivity;
@@ -21,6 +20,7 @@ import com.jinxin.paging.boundarycallback.BoundaryActivity;
 import com.jinxin.paging.itemkeyeddatasrource.ItemKeyedMainActivity;
 import com.jinxin.paging.pagekeyeddatasource.PageKeyedActivity;
 import com.jinxin.paging.positionaldatasource.PagingMainActivity;
+import com.jinxin.viewmodel.TimerActivity;
 
 /**
  * @author JinXin
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_navigation_ui).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, TestActivity.class)));
 
-        findViewById(R.id.btn_view_model).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ViewModelTestActivity.class)));
+        findViewById(R.id.btn_view_model).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, TimerActivity.class)));
 
         findViewById(R.id.btn_live_data).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LiveDataTestActivity.class)));
 

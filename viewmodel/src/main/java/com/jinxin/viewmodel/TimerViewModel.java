@@ -1,4 +1,4 @@
-package com.jinxin.jetpacktest.viewmodel;
+package com.jinxin.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 
@@ -6,17 +6,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author JinXin 2020/8/28
+ * @author JinXin 2020/11/3
  */
-public class TestViewModel extends ViewModel {
+public class TimerViewModel extends ViewModel {
 
     private Timer timer;
     private int currentSecond;
-    private OnTimerChangeListener onTimerChangeListener;
-
-    public void setOnTimerChangeListener(OnTimerChangeListener onTimerChangeListener) {
-        this.onTimerChangeListener = onTimerChangeListener;
-    }
 
     /**
      * ViewModel最重要的作用是将视图与数据分离，并独立于Activity的重建。
@@ -49,6 +44,12 @@ public class TestViewModel extends ViewModel {
     public interface OnTimerChangeListener {
 
         void onTimeChanged(int currentSecond);
+    }
+
+    private OnTimerChangeListener onTimerChangeListener;
+
+    public void setOnTimerChangeListener(OnTimerChangeListener onTimerChangeListener) {
+        this.onTimerChangeListener = onTimerChangeListener;
     }
 
     /**

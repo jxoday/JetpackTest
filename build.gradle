@@ -6,7 +6,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath 'com.android.tools.build:gradle:4.1.0'
 
         // Navigation 使用Safe Arg 插件传递参数
         classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.3.1'

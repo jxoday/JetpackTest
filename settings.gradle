@@ -1,3 +1,4 @@
+include ':viewmodel'
 include ':navigation'
 include ':lifecycle'
 include ':mvvm'
