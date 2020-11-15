@@ -1,3 +1,4 @@
+include ':livedata'
 include ':viewmodel'
 include ':navigation'
 include ':lifecycle'

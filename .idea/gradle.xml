@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lifecycle" />
+            <option value="$PROJECT_DIR$/livedata" />
             <option value="$PROJECT_DIR$/mvvm" />
             <option value="$PROJECT_DIR$/navigation" />
             <option value="$PROJECT_DIR$/paging" />

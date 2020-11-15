@@ -21,9 +21,6 @@
         <activity android:name="com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity" />
         <activity android:name="com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity" />
         <activity android:name="com.jinxin.jetpacktest.room.RoomTestActivity" />
-        <activity android:name=".livedata.LiveDataFragmentActivity" />
-        <activity android:name=".livedata.LiveDataTestActivity" />
-        <activity android:name=".viewmodel.ViewModelTestActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

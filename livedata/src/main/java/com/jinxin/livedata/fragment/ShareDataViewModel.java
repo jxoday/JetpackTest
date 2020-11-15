@@ -1,14 +1,15 @@
-package com.jinxin.jetpacktest.livedata;
+package com.jinxin.livedata.fragment;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 /**
- * @author JinXin 2020/9/6
+ * @author JinXin 2020/11/15
  */
-public class LiveDataFragmentViewModel extends ViewModel {
+public class ShareDataViewModel extends ViewModel {
 
     private MutableLiveData<Integer> progress;
+
     public MutableLiveData<Integer> getProgress() {
         if (progress == null) {
             progress = new MutableLiveData<>();

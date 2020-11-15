@@ -8,12 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.jinxin.jetpacktest.databinding.DataBindingTestActivity;
 import com.jinxin.jetpacktest.databinding.RecyclerViewBindingActivity;
 import com.jinxin.jetpacktest.databinding.TowWayBindingActivity;
-import com.jinxin.jetpacktest.livedata.LiveDataFragmentActivity;
-import com.jinxin.jetpacktest.livedata.LiveDataTestActivity;
 import com.jinxin.jetpacktest.room.RoomTestActivity;
 import com.jinxin.jetpacktest.room.livedata.LiveDataRoomTestActivity;
 import com.jinxin.jetpacktest.workmanager.WorkManagerTestActivity;
 import com.jinxin.lifecycle.LifecycleMainActivity;
+import com.jinxin.livedata.TimerLiveDataActivity;
+import com.jinxin.livedata.fragment.FragmentActivity;
 import com.jinxin.navigation.NavigationActivity;
 import com.jinxin.navigation.test.TestActivity;
 import com.jinxin.paging.boundarycallback.BoundaryActivity;
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_view_model).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, TimerActivity.class)));
 
-        findViewById(R.id.btn_live_data).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LiveDataTestActivity.class)));
+        findViewById(R.id.btn_live_data).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, TimerLiveDataActivity.class)));
 
-        findViewById(R.id.btn_live_data_fragment).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LiveDataFragmentActivity.class)));
+        findViewById(R.id.btn_live_data_fragment).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FragmentActivity.class)));
 
         findViewById(R.id.btn_room).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, RoomTestActivity.class)));
 
